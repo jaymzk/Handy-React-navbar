@@ -1,0 +1,110 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0 ;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.navbar {
+  background-color: #021e39;
+  width: 100%;
+  height: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+}
+
+.navbar .leftSide {
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar .leftSide #menuIcon {
+  display: none;
+}
+
+.navbar .rightSide {
+  flex: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 25px;
+}
+
+.rightSide input {
+  height: 30px;
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+  font-color: black;
+}
+
+.rightSide button {
+  height: 32px;
+  font-size: 20px;
+}
+
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  margin: 5px;
+}
+
+nav#hidden {
+  display: flex;
+}
+
+@media only screen and (max-width: 850px) {
+  nav a {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  nav a {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 650px) {
+
+  .navbar .leftSide {
+    justify-content: flex-start;
+  }
+  
+  .navbar .leftSide #menuIcon {
+  display: block;
+} 
+  nav a {
+    display: none;
+  }
+
+  nav#hidden {
+    position: absolute;
+    left: 0px;
+    top: 80px;
+    height: 230px;
+    max-height: 230px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+    nav#hidden a {
+    display: flex;
+    margin: 10px;
+    font-size: 25px;
+  }
+
+}
